@@ -1,6 +1,6 @@
 $DomainName = "contoso.local"
-$VMName = "contosodc"
-$User = "contoso\dcadmin"
+$VMName = "fabricomdc"
+$User = "fabricom\dcadmin"
 $PWord = ConvertTo-SecureString -String "p@55w0rd" -AsPlainText -Force
 $credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 
