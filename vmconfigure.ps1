@@ -1,4 +1,4 @@
-$DomainName = "contoso.local"
+$DomainName = "fabricom.local"
 $VMName = "fabricomdc"
 $User = "fabricom\dcadmin"
 $PWord = ConvertTo-SecureString -String "p@55w0rd" -AsPlainText -Force
