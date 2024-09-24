@@ -8,7 +8,7 @@ Install-WindowsFeature "AD-Domain-Services" -IncludeManagementTools | Out-Null
 $pw = ConvertTo-SecureString "p@55w0rd" -AsPlainText -Force
 
 mkdir "C:\PS"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/venjal/AZ801/refs/heads/fabricom/adusersetup.ps1" -OutFile "C:\PS\adusersetup.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/venjal/AZ801/refs/heads/contoso/adusersetup.ps1" -OutFile "C:\PS\adusersetup.ps1"
 
 $Trigger = New-ScheduledTaskTrigger -AtStartup
 $User = "NT AUTHORITY\SYSTEM"
@@ -20,4 +20,4 @@ $Task.Triggers.Repetition.Interval = 'PT1M'
 $Task.Triggers.Repetition.Duration = 'PT10M'
 $Task | Set-ScheduledTask
 
-Install-ADDSForest -DomainName "fabricom.local" -SafeModeAdministratorPassword $pw -DomainNetBIOSName 'fabricom' -InstallDns -Force
+Install-ADDSForest -DomainName "contoso.com" -SafeModeAdministratorPassword $pw -DomainNetBIOSName 'contoso' -InstallDns -Force
