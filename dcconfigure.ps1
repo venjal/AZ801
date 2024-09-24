@@ -20,4 +20,4 @@ $Task.Triggers.Repetition.Interval = 'PT1M'
 $Task.Triggers.Repetition.Duration = 'PT10M'
 $Task | Set-ScheduledTask
 
-Install-ADDSForest -DomainName "contoso.local" -SafeModeAdministratorPassword $pw -DomainNetBIOSName 'CONTOSO' -InstallDns -Force
+Install-ADDSForest -DomainName "fabricom.local" -SafeModeAdministratorPassword $pw -DomainNetBIOSName 'fabricom' -InstallDns -Force
