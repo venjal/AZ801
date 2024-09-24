@@ -12,7 +12,7 @@ New-ADGroup -Name "Sales" -SamAccountName Sales `
     -GroupCategory Security `
     -GroupScope Global `
     -DisplayName "Sales Team" `
-    -Path "CN=Users,DC=contoso,DC=local" `
+    -Path "CN=Users,DC=fabricom,DC=local" `
     -Description "Members of the Sales Team"
 
 New-ADUser -Name "adsales" -Description "sales team member" -Enabled $true -AccountPassword $pw
