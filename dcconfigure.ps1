@@ -8,7 +8,7 @@ Install-WindowsFeature "AD-Domain-Services" -IncludeManagementTools | Out-Null
 $pw = ConvertTo-SecureString "p@55w0rd" -AsPlainText -Force
 
 mkdir "C:\PS"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/venjal/AZ801/refs/heads/contoso.com/adusersetup.ps1" -OutFile "C:\PS\adusersetup.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/venjal/AZ801/refs/heads/fabricom/adusersetup.ps1" -OutFile "C:\PS\adusersetup.ps1"
 
 $Trigger = New-ScheduledTaskTrigger -AtStartup
 $User = "NT AUTHORITY\SYSTEM"
